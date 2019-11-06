@@ -2,7 +2,9 @@
 
 This is a simple template for making a leaflet map. This tutorial uses CartoDB Positron tiles. For additional options, visit [https://leaflet-extras.github.io/leaflet-providers/preview/](https://leaflet-extras.github.io/leaflet-providers/preview/). 
 
-<img src="https://raw.githubusercontent.com/jrue/leaflet-map/master/screenshot.png" width="50%" height="auto" style="max-width:50%;height:auto;">
+<img src="https://raw.githubusercontent.com/jrue/leaflet-from-spreadsheet/master/spreadsheet.png" width="50%" height="auto" style="max-width:50%;height:auto;">
+
+<img src="https://raw.githubusercontent.com/jrue/leaflet-from-spreadsheet/master/screenshot.png" width="50%" height="auto" style="max-width:50%;height:auto;">
 
 ## Install instructions
 
