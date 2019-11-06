@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Leaflet Map</title>
+    <link rel="stylesheet" href="leaflet/leaflet.css">
+    <style>
+        #mapid { height: 100vh; }
+    </style>
+</head>
+
+<body>
+    <div id="mapid"></div>
+    <script src="leaflet/leaflet.js"></script>
+    <script src="js/d3.v5.min.js"></script>
+    <script type="text/javascript">
+
+
+
+    //starting position of the map
+    var mymap = L.map('mapid').setView([24.605589, -107.454483], 11);
+
+    var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(mymap);
+
+
+    d3.csv("leaflet-from-demo.csv").then(function(data){
+
+
+        data.forEach(function(d){
+
+            L.marker([+d["Latitude"],+d["Longitude"]]) //{icon: L.icon({iconUrl: "" })}
+                .bindPopup("<h2>" + d["Title"] + "</h2><p>" + d["Description"] + "</p>")
+                .addTo(mymap);
+
+        });
+
+
+    });
+
+
+    </script>
+</body>
+
+</html>
